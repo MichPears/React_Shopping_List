@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { ShoppingListContext } from "../../context/ShoppingListProvider";
 import Btn from "../forms/Btn";
 import "../../scss/confirm.scss";

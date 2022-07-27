@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeProvider";
-import AddItem from "./forms/AddItem";
 import Btn from "./forms/Btn";
 import EditItem from "./forms/EditItem";
 import Confirmation from "./popups/Confirmation";
@@ -9,7 +8,6 @@ import "../scss/show-page.scss";
 export default function ShowPage({
   setShowPage,
   editedItem,
-  setEditedItem,
   setHidden,
   hidden,
 }) {
