@@ -45,14 +45,12 @@
 
 //Theme button//
 .day-night-btn-light {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
   color: $icon-color-light;
   &:hover {
     color: $btn-color-dark;
   }
 }
 .day-night-btn-dark {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
   color: $icon-color-dark;
   &:hover {
     color: $btn-color-light;

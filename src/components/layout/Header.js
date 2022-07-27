@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeProvider";
+import { RiMoonFill, RiSunFill } from "react-icons/ri";
 
 export default function Header() {
   const [theme, setTheme] = useContext(ThemeContext);
@@ -25,9 +26,9 @@ export default function Header() {
           }}
         >
           {theme === "dark" ? (
-            <span className="material-symbols-outlined"> light_mode </span>
+            <RiSunFill size={25} />
           ) : (
-            <span className="material-symbols-outlined"> dark_mode </span>
+            <RiMoonFill size={25} />
           )}
         </button>
       </div>
