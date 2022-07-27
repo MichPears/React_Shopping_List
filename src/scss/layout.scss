@@ -1,0 +1,80 @@
+@import "config";
+@import "utilities";
+
+//Header layout and background//
+@mixin header-container {
+  padding: 1rem 0;
+  @media only screen and (min-width: 600px) {
+    padding: 2rem 0;
+  }
+}
+.header-container-light {
+  @include header-container();
+  background-color: $header-color-light;
+}
+.header-container-dark {
+  @include header-container();
+  background-color: $header-color-dark;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  @media only screen and (min-width: 600px) {
+    padding: 0;
+  }
+}
+
+//Logo//
+@mixin logo {
+  font-family: $title-font;
+  font-size: 2rem;
+  @media only screen and (min-width: 600px) {
+    font-size: 3rem;
+  }
+}
+.logo-light {
+  @include logo;
+  color: $title-color-light;
+}
+.logo-dark {
+  @include logo;
+  color: $title-color-dark;
+}
+
+//Theme button//
+.day-night-btn-light {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  color: $icon-color-light;
+  &:hover {
+    color: $btn-color-dark;
+  }
+}
+.day-night-btn-dark {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  color: $icon-color-dark;
+  &:hover {
+    color: $btn-color-light;
+  }
+}
+
+//Footer//
+@mixin footer {
+  font-family: $subtitle-font;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 0.5rem 0;
+}
+.footer-light {
+  @include footer();
+  background-color: $header-color-light;
+  color: $title-color-light;
+}
+.footer-dark {
+  @include footer();
+  background-color: $header-color-dark;
+  color: $title-color-dark;
+}

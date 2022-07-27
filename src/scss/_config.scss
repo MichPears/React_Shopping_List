@@ -1,0 +1,36 @@
+$title-font: "Leckerli One", cursive;
+$list-font: "Anek Latin", sans-serif;
+$subtitle-font: "Barlow Condensed", sans-serif;
+
+//COLORS//
+//light
+$header-color-light: rgb(107, 207, 107);
+$title-color-light: lighten($header-color-light, 30%);
+$subtitle-color-light: darken($header-color-light, 40%);
+$btn-focus-color-light: darken($header-color-light, 20%);
+$border-style-light: 6px dotted $header-color-light;
+
+$bg-color-light: rgb(255, 243, 228);
+$icon-color-light: $bg-color-light;
+$btn-color-light: darken($bg-color-light, 35%);
+$text-color-light: darken($bg-color-light, 55%);
+$input-color-light: lighten($bg-color-light, 30%);
+$btn-focus-text-light: darken($bg-color-light, 20%);
+$btn-hover-color-light: darken($btn-color-light, 10%);
+$confirmation-bg-color-light: wheat;
+
+//dark
+$header-color-dark: rgb(25, 34, 82);
+$title-color-dark: lighten($header-color-dark, 50%);
+$subtitle-color-dark: lighten($header-color-dark, 40%);
+$btn-focus-color-dark: lighten($header-color-dark, 30%);
+$border-style-dark: 6px dotted $header-color-dark;
+
+$bg-color-dark: rgb(23, 16, 41);
+$icon-color-dark: lighten($bg-color-dark, 50%);
+$btn-color-dark: lighten($bg-color-dark, 30%);
+$text-color-dark: lighten($bg-color-dark, 65%);
+$input-color-dark: lighten($bg-color-dark, 10%);
+$btn-focus-text-dark: lighten($bg-color-dark, 60%);
+$btn-hover-color-dark: lighten($bg-color-dark, 40%);
+$confirmation-bg-color-dark: lighten(rgb(23, 16, 50), 5%);

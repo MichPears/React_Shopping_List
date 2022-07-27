@@ -1,0 +1,44 @@
+@import "config";
+@import "utilities";
+@import "global-mixins";
+
+//Subtitles//
+.subtitle-light {
+  @include subtitle();
+  @include subtitle-light();
+}
+.subtitle-dark {
+  @include subtitle();
+  @include subtitle-dark();
+}
+
+//Lis//
+@mixin text {
+  font-family: $list-font;
+  text-decoration: none;
+  font-size: 1.125rem;
+}
+.text-light {
+  @include text();
+  color: $text-color-light;
+}
+.text-dark {
+  @include text();
+  color: $text-color-dark;
+}
+
+//No-items//
+@mixin no-items {
+  font-family: $subtitle-font;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.no-items-light {
+  @include no-items();
+  color: lighten(desaturate($text-color-light, 50%), 20%);
+}
+.no-items-dark {
+  @include no-items();
+  color: darken(desaturate($text-color-dark, 25%), 40%);
+}

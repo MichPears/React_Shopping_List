@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Home from "./components/Home";
+import Layout from "./components/layout/Layout";
+import ShowPage from "./components/ShowPage";
+import ShoppingListContextProvider from "./context/ShoppingListProvider";
+import ThemeContextProvider from "./context/ThemeProvider";
 
 function App() {
+  const [showPage, setShowPage] = useState(false);
+  const [hidden, setHidden] = useState("hidden");
+  const [editedItem, setEditedItem] = useState({});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContextProvider>
+      <ShoppingListContextProvider>
+        <Layout>
+          {!showPage ? (
+            <Home
+              setHidden={setHidden}
+              hidden={hidden}
+              setShowPage={setShowPage}
+              setEditedItem={setEditedItem}
+            />
+          ) : (
+            <ShowPage
+              setHidden={setHidden}
+              hidden={hidden}
+              setShowPage={setShowPage}
+              editedItem={editedItem}
+              setEditedItem={setEditedItem}
+            />
+          )}
+        </Layout>
+      </ShoppingListContextProvider>
+    </ThemeContextProvider>
   );
 }
 

@@ -1,0 +1,62 @@
+@import "config";
+
+@mixin delete-confirmation {
+  position: fixed;
+  padding: 2rem;
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  p {
+    padding: 1.5rem 0;
+  }
+}
+.delete-confirmation-light {
+  @include delete-confirmation();
+  background-color: $confirmation-bg-color-light;
+}
+.delete-confirmation-dark {
+  @include delete-confirmation();
+  background-color: $confirmation-bg-color-dark;
+}
+.hidden {
+  display: none;
+}
+
+//confirm icons//
+
+@mixin cancel-icon {
+  font-size: 2.25rem;
+  &:hover {
+    color: rgb(255, 84, 31);
+  }
+}
+.cancel-icon-light {
+  @include cancel-icon();
+  color: $subtitle-color-light;
+}
+.cancel-icon-dark {
+  @include cancel-icon();
+  color: $subtitle-color-dark;
+}
+
+@mixin delete-icon {
+  font-size: 2.25rem;
+  &:hover {
+    color: $header-color-light;
+  }
+}
+.delete-icon-light {
+  @include delete-icon();
+  color: $subtitle-color-light;
+}
+.delete-icon-dark {
+  @include delete-icon();
+  color: $subtitle-color-dark;
+}

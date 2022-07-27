@@ -1,0 +1,31 @@
+@import "config";
+
+.my-1 {
+  margin: 1rem 0 2rem 0;
+}
+.mx-1 {
+  margin: 0 1rem;
+}
+.px-1 {
+  padding: 0 1rem;
+}
+
+.mw-6 {
+  max-width: 600px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.li {
+  margin: 0.5rem 1rem;
+}
+
+.bt-light {
+  border-top: $border-style-light;
+}
+.bt-dark {
+  border-top: $border-style-dark;
+}
+.link {
+  cursor: pointer;
+}

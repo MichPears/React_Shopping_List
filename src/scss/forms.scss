@@ -1,0 +1,174 @@
+@import "config";
+
+//Add form container and positioning//
+.form-container {
+  text-align: center;
+}
+.shopping-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  justify-content: center;
+  * {
+    font-size: 1.5rem;
+    margin: 0 0.25rem;
+  }
+  @media only screen and (min-width: 600px) {
+    flex-direction: row;
+    margin: 2rem 0;
+  }
+}
+
+//Label//
+.label-light {
+  font-family: $title-font;
+  color: $subtitle-color-light;
+}
+.label-dark {
+  font-family: $title-font;
+  color: $subtitle-color-dark;
+}
+
+//Inputs//
+.input-container {
+  display: flex;
+  padding: 1rem;
+}
+
+.amount-input {
+  max-width: 45px;
+}
+
+@mixin text-input {
+  border-radius: 10rem;
+  width: 100%;
+  font-family: $list-font;
+  @media only screen and (min-width: 600px) {
+    width: initial;
+  }
+}
+@mixin input-light {
+  background-color: $input-color-light;
+  color: $subtitle-color-light;
+  border: 2px solid $bg-color-light;
+  &:focus,
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $subtitle-color-light;
+    -webkit-box-shadow: 0 0 0 100px $input-color-light inset;
+    box-shadow: 0 0 0 100px $input-color-light inset;
+    outline: none;
+    border: 2px solid $text-color-light;
+  }
+}
+@mixin input-dark {
+  background-color: $input-color-dark;
+  color: $subtitle-color-dark;
+  border: 2px solid $bg-color-dark;
+  &:focus,
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $subtitle-color-dark;
+    -webkit-box-shadow: 0 0 0 100px $input-color-dark inset;
+    box-shadow: 0 0 0 100px $input-color-dark inset;
+    outline: none;
+    border: 2px solid $text-color-dark;
+  }
+}
+.text-input-light {
+  @include text-input();
+  @include input-light();
+}
+.text-input-dark {
+  @include text-input();
+  @include input-dark();
+}
+
+//Buttons//
+@mixin btn {
+  font-family: $title-font;
+  border-radius: 10rem;
+  padding: 0.25rem 0.75rem;
+  @media only screen and (min-width: 600px) {
+    padding: 0.5rem 1rem;
+  }
+}
+.btn-light {
+  @include btn();
+  color: $input-color-light;
+  background-color: $btn-color-light;
+  &:hover {
+    background-color: $btn-hover-color-light;
+  }
+  &:focus {
+    color: $btn-focus-text-light;
+    background-color: $btn-focus-color-light;
+  }
+}
+.btn-dark {
+  @include btn();
+  color: $input-color-dark;
+  background-color: $btn-color-dark;
+  &:hover {
+    background-color: $btn-hover-color-dark;
+  }
+  &:focus {
+    color: $btn-focus-text-dark;
+    background-color: $btn-focus-color-dark;
+  }
+}
+.home-center {
+  display: block;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+//edit form layout
+.edit-form {
+  * {
+    font-size: 1.5rem;
+    margin: 0 0.25rem;
+  }
+  textarea {
+    height: 100px;
+    width: 100%;
+  }
+  @media only screen and (min-width: 600px) {
+    flex-direction: row;
+    width: 90%;
+  }
+}
+.input-container {
+  display: flex;
+  padding: 1rem;
+}
+.input-save-container {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 4rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  @media only screen and (min-width: 600px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+@mixin info-input {
+  @include text-input();
+  border-radius: 1.5rem;
+  padding: 1rem;
+  height: 150px;
+  resize: none;
+}
+.info-input-light {
+  @include info-input();
+  @include input-light();
+}
+.info-input-dark {
+  @include info-input();
+  @include input-dark();
+}

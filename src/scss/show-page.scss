@@ -1,0 +1,29 @@
+@import "config";
+@import "utilities";
+@import "global-mixins";
+
+@mixin edit-subtitle {
+  margin: 2rem 0;
+  @include subtitle();
+  @media only screen and (min-width: 600px) {
+    margin: 3rem 0;
+    font-size: 3rem;
+  }
+}
+.edit-subtitle-light {
+  @include edit-subtitle();
+  @include subtitle-light();
+}
+.edit-subtitle-dark {
+  @include edit-subtitle();
+  @include subtitle-dark();
+}
+
+.bottom-btns {
+  justify-content: center;
+  gap: 1.5rem;
+  display: flex;
+  * {
+    font-size: 1.125rem;
+  }
+}

@@ -1,0 +1,19 @@
+@import "config";
+@import "utilities";
+
+@mixin subtitle {
+  font-family: $subtitle-font;
+  font-size: 2rem;
+  padding: 0.625rem;
+  @media only screen and (min-width: 600px) {
+    padding: 1rem 0;
+  }
+}
+@mixin subtitle-light {
+  color: $subtitle-color-light;
+  border-bottom: $border-style-light;
+}
+@mixin subtitle-dark {
+  color: $subtitle-color-dark;
+  border-bottom: $border-style-dark;
+}
